@@ -42,9 +42,7 @@ A passionate software developer focused on crafting clean, efficient, and scalab
 ### <img src="https://api.iconify.design/lucide:pie-chart.svg?color=%238d96a0" width="22" align="top" /> Insights & Statistics
 
 <div align="center">
-  <a href="https://github.com/KizekawaYutsuri">
-    <img src="https://github-readme-stats.vercel.app/api?username=KizekawaYutsuri&show_icons=true&theme=tokyonight&hide_border=true&v=1" alt="GitHub Stats" />
-  </a>
+
   <a href="https://github.com/KizekawaYutsuri">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=KizekawaYutsuri&theme=tokyonight&hide_border=true&v=1" alt="GitHub Streak Stats" />
   </a>
