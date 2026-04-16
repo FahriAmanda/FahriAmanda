@@ -43,8 +43,8 @@ A passionate software developer focused on crafting clean, efficient, and scalab
 
 <div align="center">
 
-  <a href="https://github.com/KizekawaYutsuri">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=KizekawaYutsuri&theme=tokyonight&hide_border=true&v=1" alt="GitHub Streak Stats" />
+  <a href="https://github.com/FahriAmanda">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=FahriAmanda&theme=tokyonight&hide_border=true&v=1" alt="GitHub Streak Stats" />
   </a>
 </div>
 
