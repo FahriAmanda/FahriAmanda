@@ -54,3 +54,4 @@ A passionate software developer focused on crafting clean, efficient, and scalab
   <img src="https://media1.tenor.com/m/rHlkrXa_lW8AAAAC/anime-frieren.gif" alt="Frieren Pout" width="200" />
   <p><i>"A journey of a thousand miles begins with a single step."</i></p>
 </div>
+# FahriAmanda
