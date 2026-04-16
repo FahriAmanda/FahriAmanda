@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://media.tenor.com/PePEtHYGMosAAAAi/frieren-spinning-maxgames331535.gif" alt="Frieren Spinning" width="120" />
   <br>
-  <h1>Kizekawa Yutsuri</h1>
+  <h1>Frieren</h1>
   <p><i>"Code live bro."</i></p>
   <p>Software Developer | Fullstack Engineer</p>
 </div>
