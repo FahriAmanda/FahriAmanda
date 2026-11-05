@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 36" width="100%" height="100%">
+  <defs>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="1" />
+      <stop offset="75%" stop-color="#f472b6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <style>
+    .pulse { animation: glowPulse 3s ease-in-out infinite; }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+  </style>
+  <line x1="40" y1="18" x2="960" y2="18" stroke="url(#divGrad)" stroke-width="2" />
+  <g class="pulse">
+    <polygon points="500,4 514,18 500,32 486,18" fill="#0f172a" stroke="#c084fc" stroke-width="2" />
+    <circle cx="500" cy="18" r="4" fill="#67e8f9" />
+    <circle cx="450" cy="18" r="3" fill="#38bdf8" />
+    <circle cx="550" cy="18" r="3" fill="#f472b6" />
+    <circle cx="380" cy="18" r="2" fill="#facc15" />
+    <circle cx="620" cy="18" r="2" fill="#facc15" />
+  </g>
+</svg>

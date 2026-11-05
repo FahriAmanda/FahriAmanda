@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090a14" />
+      <stop offset="35%" stop-color="#121528" />
+      <stop offset="70%" stop-color="#1a1736" />
+      <stop offset="100%" stop-color="#0e1726" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f6d365" />
+      <stop offset="50%" stop-color="#fda085" />
+      <stop offset="100%" stop-color="#f6d365" />
+    </linearGradient>
+
+    <linearGradient id="cyanViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="manaGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.0" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#67e8f9" stroke-width="0.6" stroke-opacity="0.07" />
+    </pattern>
+  </defs>
+
+  <style>
+    .title-jp {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+      font-weight: 800;
+      letter-spacing: 6px;
+    }
+    .title-en {
+      font-family: 'Cinzel', 'Segoe UI', 'Ubuntu', 'Helvetica Neue', sans-serif;
+      font-weight: 900;
+      letter-spacing: 8px;
+    }
+    .mono {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+    }
+    .spin-slow {
+      transform-origin: 600px 190px;
+      animation: rotateCW 36s linear infinite;
+    }
+    .spin-reverse {
+      transform-origin: 600px 190px;
+      animation: rotateCCW 28s linear infinite;
+    }
+    .pulse-ring {
+      animation: pulse 4s ease-in-out infinite;
+    }
+    .float-1 {
+      animation: floatUp 6s ease-in-out infinite;
+    }
+    .float-2 {
+      animation: floatUp 8s ease-in-out infinite 2s;
+    }
+    .float-3 {
+      animation: floatUp 5s ease-in-out infinite 1s;
+    }
+    .twinkle {
+      animation: twinkleAnim 3s ease-in-out infinite;
+    }
+    .twinkle-delayed {
+      animation: twinkleAnim 3.5s ease-in-out infinite 1.5s;
+    }
+    @keyframes rotateCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes rotateCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 0.65; }
+    }
+    @keyframes floatUp {
+      0%, 100% { transform: translateY(0px); opacity: 0.4; }
+      50% { transform: translateY(-14px); opacity: 0.95; }
+    }
+    @keyframes twinkleAnim {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="380" rx="18" fill="url(#bgGrad)" />
+  <rect width="1200" height="380" rx="18" fill="url(#grid)" />
+
+  <!-- Ambient Mana Aura -->
+  <circle cx="600" cy="190" r="260" fill="url(#manaGlow)" class="pulse-ring" />
+  <circle cx="190" cy="80" r="140" fill="#7c3aed" opacity="0.12" filter="url(#softGlow)" />
+  <circle cx="1020" cy="300" r="160" fill="#06b6d4" opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Animated Arcane Magic Circle (Mahoujin) Behind Title -->
+  <g class="spin-slow" opacity="0.22">
+    <circle cx="600" cy="190" r="155" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-dasharray="8 6" />
+    <circle cx="600" cy="190" r="138" fill="none" stroke="#c084fc" stroke-width="1" />
+    <polygon points="600,52 720,259 480,259" fill="none" stroke="#67e8f9" stroke-width="1.2" />
+    <polygon points="600,328 720,121 480,121" fill="none" stroke="#c084fc" stroke-width="1.2" />
+    <rect x="502" y="92" width="196" height="196" fill="none" stroke="#f6d365" stroke-width="0.9" transform="rotate(45 600 190)" />
+  </g>
+
+  <g class="spin-reverse" opacity="0.18">
+    <circle cx="600" cy="190" r="112" fill="none" stroke="#f6d365" stroke-width="1.2" stroke-dasharray="4 8" />
+    <rect x="520" y="110" width="160" height="160" fill="none" stroke="#67e8f9" stroke-width="1" />
+    <circle cx="600" cy="190" r="75" fill="none" stroke="#f472b6" stroke-width="1" />
+  </g>
+
+  <!-- Outer Anime HUD Frame -->
+  <rect x="16" y="16" width="1168" height="348" rx="12" fill="none" stroke="#334155" stroke-width="1.5" />
+  <rect x="24" y="24" width="1152" height="332" rx="8" fill="none" stroke="url(#cyanViolet)" stroke-width="1" stroke-opacity="0.45" />
+
+  <!-- HUD Corner Accents -->
+  <path d="M 24 64 L 24 24 L 64 24" fill="none" stroke="#67e8f9" stroke-width="3" filter="url(#glow)" />
+  <path d="M 1176 64 L 1176 24 L 1136 24" fill="none" stroke="#c084fc" stroke-width="3" filter="url(#glow)" />
+  <path d="M 24 316 L 24 356 L 64 356" fill="none" stroke="#c084fc" stroke-width="3" filter="url(#glow)" />
+  <path d="M 1176 316 L 1176 356 L 1136 356" fill="none" stroke="#67e8f9" stroke-width="3" filter="url(#glow)" />
+
+  <!-- Left & Right Vertical Japanese Columns -->
+  <g opacity="0.75">
+    <rect x="44" y="54" width="38" height="272" rx="6" fill="#0f172a" fill-opacity="0.7" stroke="#67e8f9" stroke-width="0.8" stroke-opacity="0.4" />
+    <text x="63" y="88" fill="#67e8f9" font-size="15" text-anchor="middle" class="title-jp">葬</text>
+    <text x="63" y="114" fill="#67e8f9" font-size="15" text-anchor="middle" class="title-jp">送</text>
+    <text x="63" y="140" fill="#a855f7" font-size="15" text-anchor="middle" class="title-jp">の</text>
+    <text x="63" y="166" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">フ</text>
+    <text x="63" y="192" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">リ</text>
+    <text x="63" y="218" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ー</text>
+    <text x="63" y="244" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">レ</text>
+    <text x="63" y="270" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ン</text>
+    <circle cx="63" cy="302" r="4" fill="#f6d365" class="pulse-ring" />
+  </g>
+
+  <g opacity="0.75">
+    <rect x="1118" y="54" width="38" height="272" rx="6" fill="#0f172a" fill-opacity="0.7" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.4" />
+    <text x="1137" y="88" fill="#f6d365" font-size="15" text-anchor="middle" class="title-jp">魔</text>
+    <text x="1137" y="114" fill="#f6d365" font-size="15" text-anchor="middle" class="title-jp">導</text>
+    <text x="1137" y="140" fill="#c084fc" font-size="15" text-anchor="middle" class="title-jp">開</text>
+    <text x="1137" y="166" fill="#c084fc" font-size="15" text-anchor="middle" class="title-jp">発</text>
+    <text x="1137" y="192" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">エ</text>
+    <text x="1137" y="218" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ン</text>
+    <text x="1137" y="244" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ジ</text>
+    <text x="1137" y="270" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ニ</text>
+    <text x="1137" y="296" fill="#e2e8f0" font-size="15" text-anchor="middle" class="title-jp">ア</text>
+  </g>
+
+  <!-- Floating Mana Particles & Starlight -->
+  <g class="float-1">
+    <polygon points="180,95 184,105 194,109 184,113 180,123 176,113 166,109 176,105" fill="#67e8f9" filter="url(#glow)" />
+    <circle cx="240" cy="260" r="3" fill="#f6d365" />
+    <circle cx="960" cy="95" r="3.5" fill="#c084fc" />
+  </g>
+  <g class="float-2">
+    <polygon points="1015,235 1019,245 1029,249 1019,253 1015,263 1011,253 1001,249 1011,245" fill="#f6d365" filter="url(#glow)" />
+    <circle cx="310" cy="120" r="2.5" fill="#67e8f9" />
+    <circle cx="885" cy="275" r="3" fill="#f472b6" />
+  </g>
+  <g class="float-3">
+    <polygon points="340,275 343,282 350,285 343,288 340,295 337,288 330,285 337,282" fill="#c084fc" />
+    <polygon points="860,82 863,89 870,92 863,95 860,102 857,95 850,92 857,89" fill="#67e8f9" />
+  </g>
+
+  <!-- Top System Header Tag -->
+  <rect x="415" y="42" width="370" height="28" rx="14" fill="#1e1b4b" fill-opacity="0.85" stroke="#67e8f9" stroke-width="1" />
+  <text x="600" y="61" fill="#67e8f9" font-size="12" text-anchor="middle" class="mono" letter-spacing="2">
+    ✦ GRIMOIRE ARCHIVE // SYSTEM ONLINE ✦
+  </text>
+
+  <!-- Japanese Subtitle Above Name -->
+  <text x="600" y="108" fill="#cbd5e1" font-size="16" text-anchor="middle" class="title-jp">
+    『 千年を生きる魔法使い • 久世川 ゆつり / フリーレン 』
+  </text>
+
+  <!-- Main Name Hero Text -->
+  <text x="600" y="172" fill="url(#cyanViolet)" font-size="52" text-anchor="middle" class="title-en" filter="url(#glow)">
+    FAHRIZAL AMANDA
+  </text>
+
+  <!-- Role / Class Title -->
+  <text x="600" y="210" fill="url(#goldGrad)" font-size="17" text-anchor="middle" class="mono" font-weight="bold" letter-spacing="3">
+    ⚔️ FULLSTACK WEB &amp; MOBILE SORCERER • @FahriAmanda ⚔️
+  </text>
+
+  <!-- Quote Banner -->
+  <rect x="235" y="232" width="730" height="44" rx="8" fill="#0f172a" fill-opacity="0.82" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5" />
+  <text x="600" y="251" fill="#e2e8f0" font-size="13" text-anchor="middle" class="mono" font-style="italic">
+    "Waktu manusia itu singkat… dan aku terlambat menyadarinya."
+  </text>
+  <text x="600" y="269" fill="#94a3b8" font-size="11" text-anchor="middle" class="title-jp">
+    — 葬送のフリーレン (Sousou no Frieren) • Beyond Journey's End —
+  </text>
+
+  <!-- Bottom HUD Status Pills -->
+  <g transform="translate(155, 300)">
+    <rect x="0" y="0" width="210" height="32" rx="6" fill="#1e293b" fill-opacity="0.85" stroke="#38bdf8" stroke-width="1" />
+    <text x="105" y="20" fill="#38bdf8" font-size="11.5" text-anchor="middle" class="mono" font-weight="bold">
+      🏰 GUILD: MITRA VISUAL GROUP
+    </text>
+
+    <rect x="225" y="0" width="215" height="32" rx="6" fill="#1e293b" fill-opacity="0.85" stroke="#c084fc" stroke-width="1" />
+    <text x="332" y="20" fill="#c084fc" font-size="11.5" text-anchor="middle" class="mono" font-weight="bold">
+      🪄 CLASS: ARCHMAGE ENGINEER
+    </text>
+
+    <rect x="455" y="0" width="215" height="32" rx="6" fill="#1e293b" fill-opacity="0.85" stroke="#f472b6" stroke-width="1" />
+    <text x="562" y="20" fill="#f472b6" font-size="11.5" text-anchor="middle" class="mono" font-weight="bold">
+      🌌 REALM: BEYOND TIME (ID)
+    </text>
+
+    <rect x="685" y="0" width="205" height="32" rx="6" fill="#1e293b" fill-opacity="0.85" stroke="#facc15" stroke-width="1" />
+    <text x="787" y="20" fill="#facc15" font-size="11.5" text-anchor="middle" class="mono" font-weight="bold">
+      ✨ MANA LEVEL: LV. 99 MAX
+    </text>
+  </g>
+</svg>

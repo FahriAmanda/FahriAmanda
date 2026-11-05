@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="lineFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', monospace; }
+    .flow-dash {
+      stroke-dasharray: 8 6;
+      animation: dashMove 12s linear infinite;
+    }
+    @keyframes dashMove {
+      to { stroke-dashoffset: -140; }
+    }
+  </style>
+
+  <!-- Outer Frame -->
+  <rect width="1000" height="250" rx="14" fill="url(#archBg)" />
+  <rect x="10" y="10" width="980" height="230" rx="10" fill="none" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Header -->
+  <text x="500" y="40" fill="#67e8f9" font-size="14" font-weight="bold" text-anchor="middle" class="mono" letter-spacing="2">
+    ✦ 『 詠唱術式・開発プロセス 』 // END-TO-END ARCANE ENGINEERING WORKFLOW ✦
+  </text>
+
+  <!-- Animated Connecting Mana Line -->
+  <line x1="160" y1="138" x2="840" y2="138" stroke="url(#lineFlow)" stroke-width="3" class="flow-dash" />
+
+  <!-- Stage 1 -->
+  <g transform="translate(36, 65)">
+    <rect width="205" height="150" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="14" y="12" width="76" height="22" rx="4" fill="#0c4a6e" />
+    <text x="52" y="27" fill="#7dd3fc" font-size="11" font-weight="bold" text-anchor="middle" class="mono">STAGE 01</text>
+    <text x="102" y="60" fill="#f8fafc" font-size="13.5" font-weight="bold" text-anchor="middle" class="mono">📐 構想・設計</text>
+    <text x="102" y="80" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle" class="mono">Grimoire Blueprint</text>
+    <text x="102" y="104" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• System Architecture</text>
+    <text x="102" y="122" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• DB Schema &amp; ERD</text>
+    <text x="102" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• UI/UX Wireframing</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(277, 65)">
+    <rect width="205" height="150" rx="10" fill="#0f172a" stroke="#c084fc" stroke-width="1.5" />
+    <rect x="14" y="12" width="76" height="22" rx="4" fill="#3b0764" />
+    <text x="52" y="27" fill="#d8b4fe" font-size="11" font-weight="bold" text-anchor="middle" class="mono">STAGE 02</text>
+    <text x="102" y="60" fill="#f8fafc" font-size="13.5" font-weight="bold" text-anchor="middle" class="mono">🌸 前衛・召喚</text>
+    <text x="102" y="80" fill="#c084fc" font-size="12" font-weight="bold" text-anchor="middle" class="mono">Client Incantation</text>
+    <text x="102" y="104" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• Vue.js 3 &amp; Nuxt.js</text>
+    <text x="102" y="122" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• Flutter Mobile Apps</text>
+    <text x="102" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• TypeScript &amp; Tailwind</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(518, 65)">
+    <rect width="205" height="150" rx="10" fill="#0f172a" stroke="#f472b6" stroke-width="1.5" />
+    <rect x="14" y="12" width="76" height="22" rx="4" fill="#500724" />
+    <text x="52" y="27" fill="#f9a8d4" font-size="11" font-weight="bold" text-anchor="middle" class="mono">STAGE 03</text>
+    <text x="102" y="60" fill="#f8fafc" font-size="13.5" font-weight="bold" text-anchor="middle" class="mono">⚡ 後衛・魔導核</text>
+    <text x="102" y="80" fill="#f472b6" font-size="12" font-weight="bold" text-anchor="middle" class="mono">Core Alchemy &amp; API</text>
+    <text x="102" y="104" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• Laravel &amp; Express.js</text>
+    <text x="102" y="122" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• RESTful API &amp; Auth</text>
+    <text x="102" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• PostgreSQL &amp; MySQL</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(759, 65)">
+    <rect width="205" height="150" rx="10" fill="#0f172a" stroke="#facc15" stroke-width="1.5" />
+    <rect x="14" y="12" width="76" height="22" rx="4" fill="#422006" />
+    <text x="52" y="27" fill="#fde047" font-size="11" font-weight="bold" text-anchor="middle" class="mono">STAGE 04</text>
+    <text x="102" y="60" fill="#f8fafc" font-size="13.5" font-weight="bold" text-anchor="middle" class="mono">🚀 結界・展開</text>
+    <text x="102" y="80" fill="#facc15" font-size="12" font-weight="bold" text-anchor="middle" class="mono">Astral Deployment</text>
+    <text x="102" y="104" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• Clean &amp; Tested Code</text>
+    <text x="102" y="122" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• Docker &amp; CI/CD</text>
+    <text x="102" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" class="mono">• High Performance</text>
+  </g>
+</svg>
